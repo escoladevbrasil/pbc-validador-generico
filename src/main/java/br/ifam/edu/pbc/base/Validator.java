@@ -8,10 +8,13 @@ public abstract class Validator {
 
     private String errorMessage;
 
+    private Class<?> type;
 
-    public Validator(String fieldName, String errorMessage) {
+
+    public Validator(String fieldName, String errorMessage, Class<?> type) {
         this.fieldName = fieldName;
         this.errorMessage = errorMessage;
+        this.type = type;
     }
 
     public String getFieldName() {
@@ -22,9 +25,36 @@ public abstract class Validator {
         return errorMessage;
     }
 
+    public Class<?> getType() {
+        return type;
+    }
+
     public abstract void validate(Object value) throws ValidationException;
 
+    private void verifyType(Object value) throws Exception{
 
+        Class<?> objectClassType= value.getClass();
+
+        if(!objectClassType.equals(this.type)){
+            throw new ClassCastException("Error on converting types: "
+                    +objectClassType.getName()
+                    +" into "
+                    +this.type.getName());
+        }
+
+    }
+
+    public void check(Object value) throws ValidationException{
+
+        try {
+            verifyType(value);
+            validate(value);
+        }catch(Exception e){
+            throw new ValidationException(
+                    this.getFieldName()+":  "+this.getErrorMessage(),e);
+        }
+
+    }
 
 
 }

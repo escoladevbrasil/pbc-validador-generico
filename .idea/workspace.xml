@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="085d883b-cc47-4e01-aa88-737fafedcf9e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ifam/edu/pbc/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ifam/edu/pbc/base/Validator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ifam/edu/pbc/exceptions/ValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ifam/edu/pbc/validators/NameValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TesteValidador.java" afterDir="false" />
+    <list default="true" id="085d883b-cc47-4e01-aa88-737fafedcf9e" name="Changes" comment="Inicial: Validator e NameValidator">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ifam/edu/pbc/base/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ifam/edu/pbc/base/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ifam/edu/pbc/exceptions/ValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ifam/edu/pbc/exceptions/ValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ifam/edu/pbc/validators/NameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ifam/edu/pbc/validators/NameValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TesteValidador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TesteValidador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +26,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "escoladevbrasil"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="be3ac8cd-0d04-4952-83c0-f57753692ab2" />
+        <option name="url" value="https://github.com/escoladevbrasil/pbc-validador-generico.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
@@ -88,7 +96,43 @@
       <option name="presentableId" value="Default" />
       <updated>1691843401158</updated>
     </task>
+    <task id="LOCAL-00001" summary="Inicial: Validator e NameValidator">
+      <option name="closed" value="true" />
+      <created>1691850276766</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1691850276766</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Inicial: Validator e NameValidator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inicial: Validator e NameValidator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

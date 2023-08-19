@@ -1,8 +1,13 @@
 package br.ifam.edu.pbc.base;
 
+import br.ifam.edu.pbc.exception.LoggerException;
 import br.ifam.edu.pbc.exceptions.ValidationException;
 
+import java.io.IOException;
+
 public abstract class Validator {
+
+    private final ILog logger;
 
     private String fieldName;
 
@@ -10,11 +15,12 @@ public abstract class Validator {
 
     private Class<?> type;
 
-
-    public Validator(String fieldName, String errorMessage, Class<?> type) {
+    public Validator(String fieldName, String errorMessage, Class<?> type, ILog logger) throws LoggerException {
         this.fieldName = fieldName;
         this.errorMessage = errorMessage;
         this.type = type;
+        this.logger = logger;
+        logger.setSource("validator"+"-"+fieldName);
     }
 
     public String getFieldName() {
@@ -44,14 +50,22 @@ public abstract class Validator {
 
     }
 
-    public void check(Object value) throws ValidationException{
+    public void check(Object value) throws ValidationException, IOException, LoggerException {
 
         try {
+
             verifyType(value);
             validate(value);
+
         }catch(Exception e){
-            throw new ValidationException(
-                    this.getFieldName()+":  "+this.getErrorMessage(),e);
+
+            ValidationException validationException = new ValidationException(
+                    this.getFieldName()+": "+this.getErrorMessage(),e);
+
+            logger.log(validationException);
+
+            throw validationException;
+
         }
 
     }
